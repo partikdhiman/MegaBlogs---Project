@@ -2,8 +2,16 @@ import Logo from "./Logo.jsx";
 import Container from "./container/Container.jsx";
 import Button from "./Button.jsx";
 import Input from "./Input.jsx";
+import Select from "./Select.jsx";
+import PostCard from "./PostCard.jsx";
 import LogoutBtn from "./Header/LogoutBtn.jsx";
+import AuthLayout from "./AuthLayout.jsx";
+import Login from "./Login.jsx";
+import Signup from "./Signup.jsx";
 import Header from "./Header/Header.jsx";
 import Footer from "./Footer/Footer.jsx";
 
-export { Logo, Container, Button, Input, LogoutBtn, Header, Footer };
+export {
+  Logo, Container, Button, Input, Select, PostCard,
+  LogoutBtn, AuthLayout, Login, Signup, Header, Footer,
+};
