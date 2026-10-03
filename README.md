@@ -2,6 +2,8 @@
 
 A full-stack blogging platform built with **React** and **Appwrite**. Users can sign up, log in, write posts with a rich text editor, upload featured images, and manage their own content.
 
+**Live at:** [https://megablogs.vercel.app/](https://megablogs.vercel.app/)
+
 ## Features
 
 - User authentication (sign up, log in, log out) with Appwrite Auth
@@ -26,6 +28,7 @@ A full-stack blogging platform built with **React** and **Appwrite**. Users can 
 | Rich text editor | TinyMCE (`@tinymce/tinymce-react`) |
 | HTML rendering | `html-react-parser` |
 | Backend | Appwrite (Auth, TablesDB, Storage) |
+| Hosting | Vercel |
 
 ## Project Structure
 
@@ -78,6 +81,7 @@ MegaBlogs
 ├── .gitignore
 ├── index.html
 ├── package.json
+├── vercel.json                # SPA rewrite for Vercel
 └── vite.config.js
 ```
 
@@ -108,7 +112,7 @@ VITE_TINYMCE_API_KEY=
 
 ### Configure Appwrite
 
-**Platform:** In your Appwrite project, add a **Web platform** with hostname `localhost`.
+**Platform:** In your Appwrite project, add a **Web platform** with hostname `localhost` for development, and another with hostname `megablogs.vercel.app` for the live site.
 
 **Database table (posts):** create a table with these columns:
 
