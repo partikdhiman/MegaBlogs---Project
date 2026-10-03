@@ -35,7 +35,7 @@ export default function Post() {
     return post ? (
         <div className="py-10">
             <Container>
-                <div className="relative mb-6 flex w-full justify-center overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-sm">
+                <div className="relative mb-6 flex min-h-[220px] w-full justify-center rounded-2xl border border-slate-200 bg-white p-2 shadow-sm">
                     <img
                         src={appwriteService.getFilePreview(post.featuredImage)}
                         alt={post.title}
@@ -60,7 +60,9 @@ export default function Post() {
                     <h1 className="text-3xl font-bold text-slate-900">{post.title}</h1>
                 </div>
                 <div className="browser-css rounded-2xl border border-slate-200 bg-white p-6 text-slate-700 shadow-sm">
-                    {parse(post.content)}
+                    {post.content ? parse(post.content) : (
+                        <p className="text-slate-400">This post has no content yet.</p>
+                    )}
                 </div>
             </Container>
         </div>
